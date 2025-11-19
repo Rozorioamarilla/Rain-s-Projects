@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lsr7.sta.controller.MainController">
+  <children>
+    <BorderPane fx:id="mainPane" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0"
+      VBox.vgrow="ALWAYS">
+      <top>
+        <HBox alignment="CENTER" styleClass="topPane">
+          <Button text="Popup Window" onAction="#handlePopupWindow" />
+        </HBox>
+      </top>
+      <left>
+        <VBox styleClass="leftPane">
+          <Button text="LSW" onAction="#handleLSW" />
+        </VBox>
+      </left>
+      <center>
+        <VBox styleClass="centerPane">
+          <Button text="Popup Window" onAction="#handlePopupWindow" />
+        </VBox>
+      </center>
+      <right>
+        <VBox styleClass="rightPane">
+          <Button text="Popup Window" onAction="#handlePopupWindow" />
+        </VBox>
+      </right>
+      <bottom>
+        <HBox alignment="CENTER" styleClass="bottomPane">
+          <Button text="Popup Window" onAction="#handlePopupWindow" />
+        </HBox>
+      </bottom>
+    </BorderPane>
+  </children>
+</VBox>
