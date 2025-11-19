@@ -19,7 +19,7 @@
     <maven.compiler.source>21</maven.compiler.source>
     <javafx.version>21.0.5</javafx.version>
     <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
-    <junit.version>5.10.1</junit.version>
+    <junit.version>6.0.1</junit.version>
   </properties>
 
   <dependencies>
