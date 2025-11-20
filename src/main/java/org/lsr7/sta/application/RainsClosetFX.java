@@ -58,14 +58,19 @@ public class RainsClosetFX extends Application {
         // Layer images in StackPane (preserve order for proper layering)
         StackPane root = new StackPane();
         if (backgroundView != null) root.getChildren().add(backgroundView);
-        if (bodyView != null) root.getChildren().add(bodyView);
+      
         if (backHairView != null) root.getChildren().add(backHairView);
-        if (bangsView != null) root.getChildren().add(bangsView);
-        if (glassesView != null) root.getChildren().add(glassesView);
+        
+        
         if (topClothesView != null) root.getChildren().add(topClothesView);
         if (bottomClothesView != null) root.getChildren().add(bottomClothesView);
         if (shoesView != null) root.getChildren().add(shoesView);
         if (fullClothesView != null) root.getChildren().add(fullClothesView);
+
+
+        if (bodyView != null) root.getChildren().add(bodyView);
+        if (glassesView != null) root.getChildren().add(glassesView);
+        if (bangsView != null) root.getChildren().add(bangsView);
 
         // Start scene with a reasonable default size; views will bind to scene size
         Scene scene = new Scene(root, 800, 800);
