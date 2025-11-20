@@ -64,54 +64,37 @@ mvnw.cmd clean package  # Windows
 ```
 
 ### Run Tests
+Rain's Closet - Minimal JavaFX Dress-Up
+
+What this repo contains
+- Minimal JavaFX application: `src/main/java/org/lsr7/sta/application/RainsClosetFX.java`
+- Image assets under `src/main/resources/img/` used by the app
+
+Goals
+- Keep the project small and focused on building a dress-up game UI
+- Load images from the classpath so the app runs both from IDE and via Maven
+
+Run (development)
+
+The recommended way to run during development is using the JavaFX Maven plugin:
+
 ```bash
-./mvnw test             # Mac/Linux
-mvnw.cmd test           # Windows
+mvn clean javafx:run
 ```
 
-### Create Native Installer (Optional)
+Build
+
 ```bash
-# Create a custom runtime image with jlink
-./mvnw javafx:jlink
-
-# The runtime image will be in target/javafx-template/
-# Run with: target/javafx-template/bin/javafx-template
+mvn clean package
 ```
 
-> **Note**: The Maven Wrapper will automatically download Maven 3.9.6 on first run. This may take a minute depending on your internet connection.
+Notes
+- `RainsClosetFX` loads images from `resources/img` using classpath lookups (`getResource(...)`). Ensure the images exist in `src/main/resources/img/` before running.
+- For a simple development run, `mvn javafx:run` will download the correct JavaFX dependencies for your platform.
 
-## Configuration
+If you want, I can:
+- Add simple UI controls to swap clothes at runtime
+- Produce a runnable, self-contained native image using `jlink`/`jpackage`
+- Reintroduce any of the removed helper classes if you prefer a different structure
 
-### Module System
-The project uses Java Platform Module System (JPMS). Module configuration in `module-info.java`:
-```java
-module org.lsr7.sta.javafx {
-    requires javafx.controls;
-    requires javafx.fxml;
-    requires java.logging;
-    
-    opens org.lsr7.sta.controller to javafx.fxml;
-    exports org.lsr7.sta.application;
-}
-```
-
-### Logging
-Adjust log levels in `src/main/resources/logging.properties`:
-```properties
-# Set to FINE, FINER, or FINEST for more verbose logging
-.level=INFO
-org.lsr7.sta.controller.level=FINE  # Debug controllers
-org.lsr7.sta.util.level=INFO        # Normal utility logging
-```
-
-### Styling
-Customize colors in `src/main/resources/css/mainView.css`:
-```css
-.root {
-    -color-primary: #008367;
-    -color-primary-light: #01AA8F;
-}
-```
-
-## License
-MIT License
+Tell me which of the above you'd like next and I will continue.

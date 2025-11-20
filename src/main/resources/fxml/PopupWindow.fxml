@@ -1,13 +1,4 @@
+<!-- Popup window removed for simplified project -->
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.lsr7.sta.controller.PopupWindowController">
-  <center>
-    <VBox alignment="CENTER">
-      <Label text="This is a Popup Window!" />
-      <Button text="Close" onAction="#handleCloseWindow" />
-    </VBox>
-  </center>
-</BorderPane>
+<fx:root type="javafx.scene.layout.Pane" xmlns:fx="http://javafx.com/fxml/1">
+</fx:root>

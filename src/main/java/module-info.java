@@ -6,21 +6,15 @@
  * and dependency management.
  * </p>
  */
-module org.lsr7.sta.javafx {
-    // JavaFX requirements
-    requires transitive javafx.controls;
-    requires transitive javafx.fxml;
-    requires transitive javafx.graphics;
-    
-    // Java standard library modules
+module org.lsr7.sta {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires javafx.graphics;
+
     requires java.logging;
-    
-    // Open packages for JavaFX FXML reflection access
-    opens org.lsr7.sta.controller to javafx.fxml;
-    opens org.lsr7.sta.application to javafx.graphics;
-    
-    // Export public API packages
+
+    opens org.lsr7.sta.application to javafx.graphics, javafx.fxml;
     exports org.lsr7.sta.application;
-    exports org.lsr7.sta.controller;
-    exports org.lsr7.sta.util;
+
+    // Resource files (images) live under `resources/img` and don't need module opens.
 }
