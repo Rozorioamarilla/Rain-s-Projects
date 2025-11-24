@@ -1,0 +1,30 @@
+<!-- Defines layout (StackPane for the character + VBox of buttons on the side). -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.lsr7.sta.application.RainsClosetController">
+
+    <!-- Left panel of category buttons -->
+    <left>
+        <VBox spacing="12" style="-fx-padding: 20;">
+            <Button text="Tops" onAction="#showTops"/>
+            <Button text="Bottoms" onAction="#showBottoms"/>
+            <Button text="Shoes" onAction="#showShoes"/>
+            <Button text="Full Outfits" onAction="#showFullOutfits"/>
+            <Button text="Hair" onAction="#showHair"/>
+            <Button text="Accessories" onAction="#showAccessories"/>
+        </VBox>
+    </left>
+
+    <!-- Center: stacked character -->
+    <center>
+        <StackPane fx:id="rootStack" />
+    </center>
+
+</BorderPane>
