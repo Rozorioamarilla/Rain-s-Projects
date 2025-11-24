@@ -60,15 +60,15 @@ public class RainsClosetFX extends Application {
         if (backgroundView != null) root.getChildren().add(backgroundView);
       
         if (backHairView != null) root.getChildren().add(backHairView);
-        
-        
+
+
+        if (bodyView != null) root.getChildren().add(bodyView);
+
         if (topClothesView != null) root.getChildren().add(topClothesView);
         if (bottomClothesView != null) root.getChildren().add(bottomClothesView);
         if (shoesView != null) root.getChildren().add(shoesView);
         if (fullClothesView != null) root.getChildren().add(fullClothesView);
 
-
-        if (bodyView != null) root.getChildren().add(bodyView);
         if (glassesView != null) root.getChildren().add(glassesView);
         if (bangsView != null) root.getChildren().add(bangsView);
 
