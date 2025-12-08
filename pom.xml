@@ -61,6 +61,7 @@
         <version>0.0.8</version>
         <configuration>
           <mainClass>org.lsr7.sta.application.RainsClosetFX</mainClass>
+          <module>org.lsr7.sta</module>
         </configuration>
       </plugin>
     </plugins>

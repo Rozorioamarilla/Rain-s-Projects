@@ -9,11 +9,10 @@ public class RainsClosetFX extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/fxml/rains_closet.fxml")
+        Scene scene = new Scene(
+            FXMLLoader.load(getClass().getResource("/fxml/rains_closet.fxml")),
+            900, 700
         );
-
-        Scene scene = new Scene(loader.load(), 900, 700);
         stage.setScene(scene);
         stage.setTitle("Rain's Closet");
         stage.show();
